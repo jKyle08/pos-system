@@ -1,0 +1,22 @@
+CREATE TABLE user (
+    user_id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(100) NOT NULL,
+    password VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    last_name VARCHAR(20),
+    first_name VARCHAR(50),
+    middle_name VARCHAR(20),
+    user_position_id BIGINT UNSIGNED NOT NULL,
+    user_role_id BIGINT UNSIGNED NOT NULL,
+    subscription_start DATETIME,
+    subscription_end DATETIME,
+    created_date DATETIME NOT NULL,
+    updated_date DATETIME,
+    created_by BIGINT UNSIGNED NOT NULL,
+    updated_by BIGINT UNSIGNED,
+    active BOOLEAN NOT NULL,
+    FOREIGN KEY (user_position_id) REFERENCES user_position(user_position_id),
+    FOREIGN KEY (user_role_id) REFERENCES user_role(user_role_id),
+    FOREIGN KEY (created_by) REFERENCES user(user_id),
+    FOREIGN KEY (updated_by) REFERENCES user(user_id)
+);
