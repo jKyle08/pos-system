@@ -1,4 +1,4 @@
-package com.example.pos.model;
+package com.cartalogs.pos.entity;
 
 import lombok.Data;
 

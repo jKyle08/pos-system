@@ -1,4 +1,4 @@
-package com.example.pos_system;
+package com.cartalogs.pos_system;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
